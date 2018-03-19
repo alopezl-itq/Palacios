@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Palacios All Around...</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+    <link rel="stylesheet" href="gallery-clean.css">
+    <link rel="stylesheet" href="../assets/navigation-basic.css" class="styleshet">
+     <link rel="stylesheet" href="../assets/demo.css">
+    <link rel="stylesheet" href="../assets/navigation-round.css">
+    <link rel="stylesheet" href="../assets/slicknav/slicknav.min.css">
+
+
+</head>
+<body>
+
+<div class="container gallery-container">
+   
+       
+   <div class="tz-galerry">
+       <div class="row">
+        <div class="col-sm-4 col-md-4">
+            <div class="thumbnail">
+                    <a class="lightbox" href="../index.html">
+                        <img src="../imagenes/logop.jpeg" alt="Palacios All Around">
+                    </a>
+            </div>
+            
+        </div>
+        <div class="col-sm-12 col-md-6">
+           <nav class="menu-navigation-round">
+                <a href="#">Ceilings</a>
+                <a href="#">Floring</a>
+                <a href="#">Sheetrock</a>
+                <a href="#">Framing</a>
+                <a href="#">Others</a>
+                <a href="#" class="selected">Contact</a>
+            </nav>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            <script src="../assets/slicknav/jquery.slicknav.min.js"></script>       
+           </div>
+                   
+        </div>
+        
+         
+   </div>
+    </div>
+    
+    
+    
+    <div class="tz-gallery">   
+        <div class="row">
+
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a class="lightbox" href="../imagenes/portafolio/dos.jpg">
+                        <img src="../imagenes/portafolio/dos.jpg" alt="Servicio">
+                    </a>
+                    <div class="caption">
+                        <h3>Titulo del Proyecto</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a class="lightbox" href="../imagenes/portafolio/siete.jpg">
+                        <img src="../imagenes/portafolio/siete.jpg" alt="Servicio">
+                    </a>
+                    <div class="caption">
+                        <h3>Titulo del proyecto</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a class="lightbox" href="../imagenes/portafolio/tres.jpg">
+                        <img src="../imagenes/portafolio/tres.jpg" alt="Servicio">
+                    </a>
+                    <div class="caption">
+                        <h3>Titulo del proyecto</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a class="lightbox" href="../imagenes/portafolio/4.jpg">
+                        <img src="../imagenes/portafolio/4.jpg" alt="Servicio">
+                    </a>
+                    <div class="caption">
+                        <h3>Titulo del proyecto</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a class="lightbox" href="../imagenes/portafolio/5.jpg">
+                        <img src="../imagenes/portafolio/5.jpg" alt="Servicio">
+                    </a>
+                    <div class="caption">
+                        <h3>Titulo del proyecto</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a class="lightbox" href="../imagenes/portafolio/seis.jpg">
+                        <img src="../imagenes/portafolio/seis.jpg" alt="Servico">
+                    </a>
+                    <div class="caption">
+                        <h3>Titulo del proyecto</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+<script>
+    baguetteBox.run('.tz-gallery');
+</script>
+<script>
+
+    $(function(){
+
+        var menu = $('.menu-navigation-round');
+
+        menu.slicknav();
+
+        // Mark the clicked item as selected
+
+        menu.on('click', 'a', function(){
+            var a = $(this);
+
+            a.siblings().removeClass('selected');
+            a.addClass('selected');
+        });
+    });
+
+
+</script>
+</body>
+</html>
