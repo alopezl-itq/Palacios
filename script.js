@@ -11,8 +11,9 @@ var activeVintalight = function activeVintalight(container) {
             var src = element.querySelector("img").getAttribute("src"),
                 descrip = element.querySelector("img").getAttribute("alt"),
 
-            // Crear un nuevo div que se usará como overlay
-            vintalightOverlay = document.createElement("div");
+
+                // Crear un nuevo div que se usará como overlay
+                vintalightOverlay = document.createElement("div");
             // Agregar clase al div que creamos para poder darle estilos con CSS
             vintalightOverlay.classList.add("vintalight-overlay");
             // Agregar contenido al overlay 
