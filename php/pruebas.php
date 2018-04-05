@@ -9,19 +9,88 @@ include ("funciones.php");
 //genera_carpeta("galeria Nueva");
 
 ?>
-<form name="form1" id="form1" method="post" action="guarda.php" enctype="multipart/form-data">
+<html >
+<head>
 
-    <h4 class="text-center">Cargar Imagénes</h4>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
 
-    <div class="form-group">
-        <label class="col-sm-2 control-label">Nombre de la galeria</label><input name="form_galeria" type="text" required><br>
-        <label class="col-sm-2 control-label">Archivos</label>
-        <div class="col-sm-8">
-            <input type="file" class="form-control" id="archivo[]" name="archivo[]" multiple="">
+<form name="form1" id="form1" class="container" method="post" action="guarda.php" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-md-12">
+        <h4 class="text-center">Cargar Imagénes</h4>
+        </div>
+        <div class="col-md-4 ">
+            Seleccione la categoría
+        <select name="form_galeria" class="btn btn-primary" >
+            <option value="" class="btn btn-secondary" selected >Seleccione una categoria
+                <?php
+                listar_galerias();
+                ?>
+
+            </option>
+        </select>
+        </div>
+    <!--        <input name="form_galeria" type="text" required><br>-->
+
+
+
+            <div class="col-sm-4">
+                <label class="control-label ">Archivos</label>
+                <input type="file" class="form-control btn btn-primary" id="archivo[]" name="archivo[]" multiple="">
+            </div>
+        <div class="col-md-10">
+            <button type="submit" class="btn btn-secondary">Subir</button>
         </div>
 
-        <button type="submit" class="btn btn-primary">Cargar</button>
+        </div>
+    <div class="col-md-12">
+        <br>
     </div>
-
+    <div class="col-md-12">
+        <button type="button" class="btn btn-alert" data-toggle="modal" data-target="#myModal">
+            Agregar galería
+        </button>
+    </div>
 </form>
 
+
+
+<form action="pruebas.php" method="post">
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-sm">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h4 class="modal-title">Agregar galería</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <iframe src="agregagaleria.php" style="width: 100% !important; height: 100px !important"></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#myModal").on('hidden.bs.modal', function () {
+                location.reload();
+            });
+        });
+    </script>
+        </div>
+    </div>
+</form>
+
+
+</body>
+</html>

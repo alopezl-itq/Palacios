@@ -1,4 +1,5 @@
 <?php
+ob_start();
 $i=1;
 $galeria=$_POST['form_galeria'];
 $fecha=(date("n_j_g_i_s"));
@@ -45,6 +46,7 @@ foreach($_FILES["archivo"]['tmp_name'] as $key => $tmp_name)
                 echo "Ha ocurrido un error, por favor inténtelo de nuevo.<br>";
             }
                  closedir($dir);
+                 header('Location: ../muestra_imagen.php?galery='.$galeria);
             }
              else{
                 echo "tipo de archivo inválido";
@@ -52,4 +54,5 @@ foreach($_FILES["archivo"]['tmp_name'] as $key => $tmp_name)
        //Cerramos el directorio de destino
     }
 }
+ob_end_flush();
 ?>

@@ -32,9 +32,44 @@ function genera_carpeta($nombre){
 
     //Validamos si la ruta de destino existe, en caso de no existir la creamos
     if(!file_exists($directorio)){
-        mkdir($directorio, 0777) or die("No se puede crear el directorio de extracci&oacute;n");
-        echo "carpeta generada";
+        mkdir($directorio, 0777) or die("No se puede crear la carpeta para las imágenes");
+        echo "Galería generada";
     } else{
         echo "ya existe";
     }
+}
+function listar_galerias(){
+
+$directorio = opendir("../imagenes/"); //ruta actual
+$conta=1;
+
+while ($archivo = readdir($directorio)) {
+
+    if ($archivo=="." || $archivo=="..") { echo " "; } else {
+
+        $archivos[$archivo] = $archivo;
+
+    }
+
+}
+
+
+arsort ($archivos);
+
+//while ($archivo = readdir($directorio)) //obtenemos un archivo y luego otro sucesivamente
+foreach ($archivos as $archivo)
+{
+    if (preg_match("/png/", $archivo) || preg_match("/jpg/", $archivo)|| preg_match("/jpeg/", $archivo) || preg_match("/gif/", $archivo)) {
+        /*echo '<figure class="vintalight__container"> <div class="vintalight__photo"><img class="vintalight__img" src="imagenes/'.$_GET['galery'].'/'.$archivo .
+            '" alt=" "></div> </figure>';
+        */
+    }else{
+        echo "<option class=\"btn btn-secondary\" value='".$archivo."'>".ucwords(str_replace("_"," ",$archivo));
+
+    }
+
+
+}
+closedir($directorio);
+
 }
