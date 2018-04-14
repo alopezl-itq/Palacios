@@ -1,6 +1,11 @@
 <?php
-include "php/funciones.php";
-
+/**
+ * Created by PhpStorm.
+ * User: Alex
+ * Date: 12/04/2018
+ * Time: 09:10 PM
+ */
+include("php/funciones.php");
 ?>
 <!DOCTYPE html>
 <html lang="en" class="no-js">
@@ -42,50 +47,6 @@ include "php/funciones.php";
                 </div>
 
                 <div>
-                    <section class="vintalight" id="vintalight">
-
-                        <?php
-                        $directorio = opendir("imagenes/".$_GET['galery']); //ruta actual
-                        $conta=1;
-
-                        while ($archivo = readdir($directorio)) {
-
-                            if ($archivo=="." || $archivo=="..") { echo " "; } else {
-
-                                $archivos[$archivo] = $archivo;
-
-                            }
-
-                        }
-
-                        if (empty($archivos)) {
-                            echo "<header class='codrops-header'> <h1>No hay fotos en ésta galería</h1></header>";
-                        }else{
-
-
-
-                        arsort ($archivos);
-
-                        //while ($archivo = readdir($directorio)) //obtenemos un archivo y luego otro sucesivamente
-                        foreach ($archivos as $archivo)
-                        {
-                            if (preg_match("/png/", $archivo) || preg_match("/jpg/", $archivo)|| preg_match("/jpeg/", $archivo) || preg_match("/gif/", $archivo)) {
-                                    echo '<figure class="vintalight__container"> <div class="vintalight__photo"><img class="vintalight__img" src="imagenes/'.$_GET['galery'].'/'.$archivo .
-                                    '" alt=" "></div> </figure>';
-                                     $conta++;
-                                }
-                                if ($conta>6){
-                                echo '</section> <section class="vintalight" id="vintalight1">';
-                                $conta=1;
-                                }
-
-
-                        }
-                        }
-                        closedir($directorio);
-                        ?>
-
-                    </section>
                     <script src="script.js"></script>
                 </div>
                 <div class="related">
@@ -101,13 +62,6 @@ include "php/funciones.php";
     <!-- /container -->
     <nav class="outer-nav top horizontal">
         <a href="index.html" class="icon-image">Inicio </a>
-        <?php
-
-
-        genera_menu();
-        ?>
-
-
     </nav>
 </div>
 <!-- /perspective -->
