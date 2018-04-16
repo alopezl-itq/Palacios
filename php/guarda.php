@@ -46,6 +46,7 @@ foreach($_FILES["archivo"]['tmp_name'] as $key => $tmp_name)
                 echo "Ha ocurrido un error, por favor inténtelo de nuevo.<br>";
             }
                  closedir($dir);
+
                  header('Location: ../muestra_imagen.php?galery='.$galeria);
             }
              else{

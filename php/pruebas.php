@@ -21,7 +21,7 @@ include("funciones.php");
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" type="text/css" href="../css/normalize.css"/>
     <link rel="stylesheet" type="text/css" href="../css/demo.css"/>
-    <link rel="stylesheet" type="text/css" href="../css/component.css"/>
+
     <!-- csstransforms3d-shiv-cssclasses-prefixed-teststyles-testprop-testallprops-prefixes-domprefixes-load -->
     <script src="../js/modernizr.custom.25376.js"></script>
     <link rel="stylesheet" href="../style.css">
@@ -39,11 +39,7 @@ include("funciones.php");
                     </span>
             </div>
             <div class="main clearfix">
-                <div class="column_menu">
-                    <p>
-                        <button id="showMenu"> Menu</button>
-                    </p>
-                </div>
+
                 <div>
                 <form name="form1" id="form1" class="container" method="post" action="guarda.php"
                       enctype="multipart/form-data">
@@ -116,15 +112,7 @@ include("funciones.php");
                         </div>
                 </form>
                 </div>
-                <div>
-                    <nav class="outer-nav top horizontal">
-                        <a href="index.html" class="icon-image">Inicio </a>
-                        <a href="mostrargalerias.php" class="icon-image">Lista galerias </a>
-
-
-                    </nav>
-
-                </div>
+                s
 
 
 

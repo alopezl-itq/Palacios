@@ -21,9 +21,7 @@ include("funciones.php");
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="../css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="../css/demo.css" />
-    <link rel="stylesheet" type="text/css" href="../css/component.css" />
+
     <!-- csstransforms3d-shiv-cssclasses-prefixed-teststyles-testprop-testallprops-prefixes-domprefixes-load -->
     <script src="../js/modernizr.custom.25376.js"></script>
     <link rel="stylesheet" href="../style.css">
@@ -45,11 +43,7 @@ include("funciones.php");
                 <h1>Palacios All Around <span>Bienvenido</span></h1>
             </header>
             <div class="main clearfix">
-                <div class="column_menu">
-                    <p>
-                        <button id="showMenu"> Menu</button>
-                    </p>
-                </div>
+                
 
                 <div >
                     <div class="column">
